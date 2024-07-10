@@ -3,6 +3,7 @@ import Page from './components/Page/Page.tsx';
 import {useCallback, useEffect, useState} from 'react';
 import {Route, Routes, useLocation} from 'react-router-dom';
 import axiosApi from './axiosApi.ts';
+import Admin from './components/Admin/Admin.tsx';
 
 interface PageData {
   id: string;
@@ -55,7 +56,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<h1>Home page</h1>} />
           <Route path="/pages/:pageId" element={<Page />} />
-
+          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<h1>Not found!</h1>} />
         </Routes>
       </main>
